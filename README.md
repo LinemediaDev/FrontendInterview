@@ -1,4 +1,4 @@
-## Installing and running the project:
+## Налаштування проєкту:
 
 ```sh
 git clone https://github.com/LinemediaDev/FrontendInterview.git
@@ -6,18 +6,19 @@ cd FrontendInterview
 npm install
 npm run dev
 ```
-After running the above commands, open the project at https://localhost:3000
+Після запуску команд має бути доступна сторінка https://localhost:3000
 
-## Files you need to work with:
-1) `app.js` - configured with [express](https://expressjs.com/en/guide/routing.html), renders the `index.html` file
-1) `public/index.html` - html file that rendering at https://localhost:3000
-1) `public/index.js` - js file that included by `public/index.html`
-1) `db.json` - contains the list of articles
+## З якими файлами доведеться працювати:
+1) `app.js` - конфігурація [express](https://expressjs.com/en/guide/routing.html) додатку для запуску на локалі
+1) `public/index.html` - HTML файл, який рендериться за посиланням https://localhost:3000
+1) `public/index.css` - CSS файл, підключається в `index.html`
+1) `public/index.js` - JS файл, підключається в `index.html`
+1) `db.json` - містить данні про статті, які потрібно буде відобразити на сторінці
 
-## What to do:
-1) In `app.js` implement the `app.get('/items/'` route that returns the list of articles from the `db.json` file
-1) In `public/index.js` load the data from the `/items/` route and display list of articles in the `.articles` element
-1) Configure a pagination for the list of articles (5 articles per page). Use predefined styles from the `public/index.css` file.
+## Що треба зробити:
+1) `app.js` - імплементувати роут `app.get('/items/'` який має повернути записи з файлу `db.json`
+1) `public/index.js` відправити запит на роут `/items/`, отримати данні статтей та відобразити їх в елементі `.articles`
+1) Налаштувати пагінацію на сторінці (кнопки "попередня" та "наступна"), показувати 5 статтей на сторінку. Використати готову верстку і стилі пагінатора
 
-## Articles should be displayed like this:
+## Статті мають виглядати наступним чином:
 ![Articles](/final-project.png)
